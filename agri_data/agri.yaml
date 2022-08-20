@@ -1,0 +1,15 @@
+train: ./agri_data/data/train # 118287 images
+val: ./agri_data/data/test  # 5000 images
+test: ./agri_data/data/test
+anno_path: ./agri_data/annotations/instances_test.json
+# number of classes
+nc: 2
+# whether it is coco dataset, only coco dataset should be set to True.
+is_coco: False
+
+# class names
+names: [ 'crop','weed' ]
+
+# python tools/train.py --batch 32 --conf configs/yolov6s.py --data agri_data/agri.yaml --device 0
+
+# python tools/eval.py  --batch 32 --data agri_data/agri.yaml --weights runs/train/exp29/weights/best_ckpt.pt --task val
